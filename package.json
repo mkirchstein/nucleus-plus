@@ -1,11 +1,8 @@
 {
-  "name": "@mkirchstein/nucleus-plus",
+  "name": "nucleus-plus",
   "version": "0.0.1",
   "packageManager": "yarn@4.1.1",
   "description": "UI patterns build with Nucleus primitives plus additional dependencies",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@mkirchstein"
-  },
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -16,7 +13,6 @@
   "scripts": {
     "dev": "yarn storybook",
     "build": "tsc && vite build",
-    "package": "NODE_ENV=production yarn run build && yarn pack --install-if-needed --out %s-%v.tgz",
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
     "test": "vitest run",
@@ -26,7 +22,9 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@earnest/nucleus-design-system": "^2.1.1"
+    "@earnest/nucleus-design-system": "^2.1.1",
+    "@radix-ui/react-form": "^0.0.3",
+    "reaptcha": "^1.12.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.25",
