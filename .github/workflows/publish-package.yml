@@ -37,8 +37,12 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org/'
 
+      # - name: Install dependencies
+      #   run: npm install
       - name: Install dependencies
-        run: npm install
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+          npm install
 
       - name: Run tests
         run: npm test
