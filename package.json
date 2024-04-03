@@ -1,5 +1,5 @@
 {
-  "name": "nucleus-plus",
+  "name": "@mkirchstein/nucleus-plus",
   "version": "0.0.2",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@mkirchstein"
