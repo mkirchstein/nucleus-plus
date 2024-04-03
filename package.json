@@ -1,6 +1,9 @@
 {
   "name": "nucleus-plus",
   "version": "0.0.2",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@mkirchstein"
+  },
   "packageManager": "yarn@4.1.1",
   "description": "UI patterns build with Nucleus primitives plus additional dependencies",
   "type": "module",
