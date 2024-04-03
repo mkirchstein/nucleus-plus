@@ -1,0 +1,76 @@
+{
+  "name": "@mkirchstein/nucleus-plus",
+  "version": "0.0.1",
+  "packageManager": "yarn@4.1.1",
+  "description": "UI patterns build with Nucleus primitives plus additional dependencies",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@mkirchstein"
+  },
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "dev": "yarn storybook",
+    "build": "tsc && vite build",
+    "package": "NODE_ENV=production yarn run build && yarn pack --install-if-needed --out %s-%v.tgz",
+    "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
+    "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
+    "test": "vitest run",
+    "test-watch": "vitest",
+    "test:ui": "vitest --ui",
+    "storybook": "storybook dev -p 6016",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@earnest/nucleus-design-system": "^2.1.1"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.2.25",
+    "@storybook/addon-essentials": "^8.0.4",
+    "@storybook/addon-interactions": "^8.0.4",
+    "@storybook/addon-links": "^8.0.4",
+    "@storybook/addon-onboarding": "^8.0.4",
+    "@storybook/blocks": "^8.0.4",
+    "@storybook/react": "^8.0.4",
+    "@storybook/react-vite": "^8.0.4",
+    "@storybook/test": "^8.0.4",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.2",
+    "@types/react": "^18.2.69",
+    "@types/react-dom": "^18.2.14",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "csstype": "^3.1.3",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "js-tokens": "^4.0.0",
+    "jsdom": "^24.0.0",
+    "loose-envify": "^1.4.0",
+    "prettier": "^3.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^8.0.4",
+    "styled-components": "^6.1.8",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.3",
+    "vite-plugin-dts": "^3.7.3",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.4.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

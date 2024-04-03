@@ -1,0 +1,27 @@
+version: '3.6'
+
+services:
+  nucleusplus:
+    environment:
+      - HOME=/usr/src/app
+      - NODE_OPTIONS=--max_old_space_size=4096
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    volumes:
+      - /usr/src/app/node_modules
+      - .:/usr/src/app
+  # sonar:
+  #   build:
+  #     context: .
+  #     dockerfile: ./Dockerfile
+  #     target: sonar
+  #   environment:
+  #     - NODE_ENV=test
+  #     - APP_ENV=test
+  #     - ENV_PATH
+  #     - CHANGE_ID
+  #   volumes:
+  #     - /usr/src/app/node_modules
+  #     - .:/usr/src/app
